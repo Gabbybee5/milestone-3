@@ -1,0 +1,7 @@
+# Raw dataset archives and unzipped data
+*.zip
+data/
+
+# Quarto cache and build artifacts
+/.quarto/
+project_files/
