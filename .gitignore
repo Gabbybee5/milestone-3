@@ -1,7 +1,3 @@
-# Raw dataset archives and unzipped data
-*.zip
-data/
-
 # Quarto cache and build artifacts
 /.quarto/
 /_site/
