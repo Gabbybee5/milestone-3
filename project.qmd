@@ -1,8 +1,9 @@
 ---
-title: "Whale Shark vs. Beluga Whale: Spottings and Observation Date Spans"
+title: ""
 format:
   html:
     page-layout: full
+    title-block-style: none
 execute:
   echo: false
   warning: false
@@ -11,39 +12,177 @@ execute:
 
 ```{=html}
 <style>
-/* Ensure main content and Plotly chart span the full width of the page from left to right */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f3f7fa;
+  color: #1e293b;
+}
+
+/* Hide default empty Quarto title block */
+#title-block-header {
+  display: none !important;
+}
+
+/* Full-width layout container */
 #quarto-content.page-columns,
 main.content.page-columns {
   display: block !important;
   width: 100% !important;
-  max-width: 100% !important;
-  padding: 0 2rem !important;
+  max-width: 1440px !important;
+  padding: 0 2rem 3rem 2rem !important;
   margin: 0 auto !important;
 }
+
+/* Ocean-themed Hero Banner */
+.hero-banner {
+  background: linear-gradient(135deg, #07192f 0%, #0d3b66 55%, #14638f 100%);
+  color: #ffffff;
+  padding: 2.75rem 2.5rem;
+  border-radius: 16px;
+  margin: 1.5rem 0 1.75rem 0;
+  box-shadow: 0 12px 30px rgba(7, 25, 47, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #7dd3fc;
+  background: rgba(125, 211, 252, 0.12);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.85rem;
+}
+
+.hero-title {
+  font-size: 2.35rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 0.65rem 0;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  max-width: 880px;
+  margin: 0;
+}
+
+/* Filter Row Card */
+.filter-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  background: #ffffff;
+  padding: 1.35rem 1.6rem;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.filter-row .control-label {
+  display: block !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #0f172a;
+  margin-bottom: 0.65rem !important;
+}
+
+.filter-row .cell-output-display.no-overflow-x {
+  overflow: visible !important;
+}
+
+/* Plot Card */
+.plot-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.06);
+  padding: 1.5rem 1.5rem 1.25rem 1.5rem;
+}
+
+.plot-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.plot-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+/* Keep Plotly modebar neatly positioned in the top-right corner */
+.js-plotly-plot .plotly .modebar {
+  top: -42px !important;
+  right: 0px !important;
+}
+
+/* Styled Tabset for Switching Between Graphs */
+.panel-tabset .nav-tabs {
+  border-bottom: 2px solid #cbd5e1;
+  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+}
+
+.panel-tabset .nav-tabs .nav-link {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #475569;
+  background: #e2e8f0;
+  border: 1px solid transparent;
+  border-radius: 10px 10px 0 0;
+  padding: 0.75rem 1.4rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.panel-tabset .nav-tabs .nav-link:hover {
+  color: #0f172a;
+  background: #cbd5e1;
+}
+
+.panel-tabset .nav-tabs .nav-link.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #0d3b66 0%, #0f766e 100%);
+  border-color: #0d3b66;
+}
+
 .cell, .cell-output-display, .plotly.html-widget {
   width: 100% !important;
   max-width: 100% !important;
 }
-.filter-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  width: 100%;
-  margin-bottom: 1.5rem;
-  background: #f8f9fa;
-  padding: 1rem 1.25rem;
-  border-radius: 8px;
-  border: 1px solid #e9ecef;
-}
-.filter-row .control-label {
-  display: block !important;
-  font-weight: 600;
-  margin-bottom: 0.5rem !important;
-}
-.filter-row .cell-output-display.no-overflow-x {
-  overflow: visible !important;
-}
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('a[data-bs-toggle="tab"], button[data-bs-toggle="tab"], .panel-tabset .nav-link').forEach(function(tabEl) {
+    tabEl.addEventListener('shown.bs.tab', function () {
+      window.dispatchEvent(new Event('resize'));
+    });
+    tabEl.addEventListener('click', function () {
+      setTimeout(function() { window.dispatchEvent(new Event('resize')); }, 60);
+    });
+  });
+});
+</script>
 ```
 
 ```{r}
@@ -137,9 +276,17 @@ all_occurrences <- bind_rows(
 shared_occurrences <- SharedData$new(all_occurrences)
 ```
 
-## Individual Spottings and Trackings of Whale Sharks and Beluga Whales
+<div class="hero-banner">
+  <div class="hero-eyebrow">Ocean Telemetry & Acoustic Monitoring</div>
+  <h1 class="hero-title">Whale Shark vs. Beluga Whale: Spottings & Observation Spans</h1>
+  <p class="hero-subtitle">
+    Explore how satellite-tracked <strong>Whale Sharks</strong> in Australia's Coral Sea compare with moored acoustic detections of <strong>Beluga Whales</strong> in the Arctic's Western Beaufort Sea. Select a graph view tab below to explore the interactive scatter plot or the summary bar graph.
+  </p>
+</div>
 
-Use the interactive filters below, the **Timeframe View** dropdown at the top-left of the chart, or the bottom range slider to pinpoint specific timeframes, spotting counts, or individual organisms across all **`r scales::comma(nrow(all_occurrences))` points**.
+::: {.panel-tabset}
+
+## 1. Main Scatter Plot (Individual Spottings & Date Spans)
 
 <div class="filter-row">
 <div>
@@ -176,6 +323,10 @@ filter_select(
 </div>
 </div>
 
+<div class="plot-card">
+<div class="plot-card-header">
+  <h2 class="plot-card-title">Cumulative Spottings & Trackings Over Observation Date Span</h2>
+</div>
 ```{r}
 plot_ly(
   data = shared_occurrences,
@@ -192,34 +343,33 @@ plot_ly(
   mode = "markers",
   width = "100%",
   height = 680,
-  marker = list(size = 6, opacity = 0.65)
+  marker = list(size = 6.5, opacity = 0.72)
 ) |>
   layout(
     autosize = TRUE,
-    margin = list(t = 125, r = 25, b = 65, l = 65),
-    title = list(
-      text = "Whale Shark vs. Beluga Whale Spottings & Trackings Over Observation Date Span",
-      x = 0.5,
-      xanchor = "center",
-      y = 0.98,
-      yanchor = "top"
-    ),
+    paper_bgcolor = "#ffffff",
+    plot_bgcolor = "#f8fafc",
+    margin = list(t = 95, r = 25, b = 65, l = 70),
     xaxis = list(
-      title = "Observation Date Span Elapsed (Days Since First Sighting)",
+      title = "<b>Observation Date Span Elapsed (Days Since First Sighting)</b>",
+      gridcolor = "#e2e8f0",
+      zerolinecolor = "#cbd5e1",
       rangemode = "nonnegative",
       minallowed = 0,
       range = c(0, 4050),
       tick0 = 0,
-      rangeslider = list(visible = TRUE, thickness = 0.08, range = c(0, 4050))
+      rangeslider = list(visible = TRUE, thickness = 0.08, bgcolor = "#f1f5f9", range = c(0, 4050))
     ),
     yaxis = list(
-      title = "Cumulative Spotting / Tracking Count",
+      title = "<b>Cumulative Spotting / Tracking Count</b>",
+      gridcolor = "#e2e8f0",
+      zerolinecolor = "#cbd5e1",
       rangemode = "nonnegative",
       minallowed = 0,
       range = c(0, 1300),
       tick0 = 0
     ),
-    legend = list(orientation = "h", x = 1, xanchor = "right", y = 1.11, yanchor = "bottom"),
+    legend = list(orientation = "h", x = 1, xanchor = "right", y = 1.12, yanchor = "bottom"),
     updatemenus = list(
       list(
         type = "dropdown",
@@ -227,6 +377,8 @@ plot_ly(
         xanchor = "left",
         y = 1.02,
         yanchor = "bottom",
+        bgcolor = "#f8fafc",
+        bordercolor = "#cbd5e1",
         buttons = list(
           list(
             label = "View: All Timeframes (0–4,006 Days)",
@@ -279,3 +431,72 @@ plot_ly(
   ) |>
   config(responsive = TRUE)
 ```
+</div>
+
+## 2. Bar Graph (Total Spottings & Monthly Comparison)
+
+<div class="plot-card">
+<div class="plot-card-header">
+  <h2 class="plot-card-title">Bar Graph Comparison: Total Detections by Organism & Monthly Activity</h2>
+</div>
+```{r}
+organism_summary <- all_occurrences |>
+  summarize(
+    total_spottings = n(),
+    total_span_days = max(total_span_days),
+    first_seen = min(first_seen),
+    last_seen = max(last_seen),
+    .by = c(common_name, group)
+  ) |>
+  arrange(desc(total_spottings)) |>
+  mutate(
+    common_name = fct_inorder(common_name),
+    bar_hover = paste0(
+      "<b>", common_name, "</b><br>",
+      "Group: ", group, "<br>",
+      "Total Spottings / Detections: <b>", scales::comma(total_spottings), "</b><br>",
+      "Observation Span: <b>", scales::comma(total_span_days), " days</b> (",
+      first_seen, " to ", last_seen, ")"
+    )
+  )
+
+plot_ly(
+  data = organism_summary,
+  x = ~common_name,
+  y = ~total_spottings,
+  color = ~group,
+  colors = c(
+    "Beluga Whale Detections (Beaufort Sea)" = "#38bdf8",
+    "Whale Shark Trackings (Coral Sea)" = "#0f766e"
+  ),
+  text = ~bar_hover,
+  hoverinfo = "text",
+  type = "bar",
+  width = "100%",
+  height = 620
+) |>
+  layout(
+    autosize = TRUE,
+    paper_bgcolor = "#ffffff",
+    plot_bgcolor = "#f8fafc",
+    margin = list(t = 50, r = 25, b = 140, l = 70),
+    xaxis = list(
+      title = "",
+      tickangle = -35,
+      gridcolor = "#e2e8f0"
+    ),
+    yaxis = list(
+      title = "<b>Total Recorded Spottings / Detections</b>",
+      gridcolor = "#e2e8f0",
+      zerolinecolor = "#cbd5e1",
+      rangemode = "nonnegative",
+      minallowed = 0,
+      range = c(0, 1350)
+    ),
+    legend = list(orientation = "h", x = 1, xanchor = "right", y = 1.04, yanchor = "bottom")
+  ) |>
+  config(responsive = TRUE)
+```
+</div>
+
+:::

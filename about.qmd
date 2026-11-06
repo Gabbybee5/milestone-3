@@ -1,20 +1,114 @@
 ---
-title: "About This Graphic"
+title: ""
 format:
   html:
-    page-layout: article
+    page-layout: full
+    title-block-style: none
 ---
 
-## Overview
+```{=html}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-This project compares observation timelines and tracking patterns between two marine species in very different ocean environments:
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f3f7fa;
+  color: #1e293b;
+}
+
+#title-block-header {
+  display: none !important;
+}
+
+#quarto-content.page-columns,
+main.content.page-columns {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+  padding: 0 2rem 3rem 2rem !important;
+  margin: 0 auto !important;
+}
+
+.hero-banner {
+  background: linear-gradient(135deg, #07192f 0%, #0d3b66 55%, #14638f 100%);
+  color: #ffffff;
+  padding: 2.5rem 2.5rem;
+  border-radius: 16px;
+  margin: 1.5rem 0 1.75rem 0;
+  box-shadow: 0 12px 30px rgba(7, 25, 47, 0.18);
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #7dd3fc;
+  background: rgba(125, 211, 252, 0.12);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.85rem;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.info-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-card h2 {
+  margin-top: 0;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 1.35rem;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 0.6rem;
+}
+</style>
+
+<div class="hero-banner">
+  <div class="hero-eyebrow">Methodology & Data Guide</div>
+  <h1 class="hero-title">About the Whale Shark & Beluga Whale Graphic</h1>
+  <p class="hero-subtitle">
+    Understanding the datasets, axes, ecological patterns, and interactive controls behind the visualization.
+  </p>
+</div>
+```
+
+<div class="info-card">
+
+## Overview of the Datasets
+
+This project compares observation timelines and tracking patterns between two iconic marine species in contrasting ocean environments:
 
 1. **Whale Sharks (*Rhincodon typus*) in the Coral Sea (Australia):** **2,391 observations** collected by the Biopixel Oceans Foundation and James Cook University, combining satellite tag transmissions from 18 named whale sharks (such as *Megashark*, *Alexios*, *Ali*, and *Sharpie*) with 136 opportunistic Coral Sea sightings.
 2. **Beluga Whales (*Delphinapterus leucas*) in the Western Beaufort Sea (Arctic):** **1,244 acoustic detections** recorded by a moored underwater hydrophone (`Aural_M2`) from the University of Washington between September 2010 and August 2011.
 
----
+</div>
 
-## How to Read the Graphic
+<div class="info-card">
+
+## How to Read the Axes
 
 - **Horizontal Axis (X-Axis) — Observation Date Span Elapsed (Days Since First Sighting):**  
   Measures how many days have passed since that specific individual shark (or the Beaufort Sea mooring) was first recorded. Placing every track on a "Days Since First Sighting" scale lets us directly compare observation durations even when the recordings occurred in different calendar years.
@@ -23,9 +117,11 @@ This project compares observation timelines and tracking patterns between two ma
 - **Color Grouping:**  
   Dark teal points represent **Whale Shark Trackings (Coral Sea)** and light blue points represent **Beluga Whale Detections (Beaufort Sea)**.
 
----
+</div>
 
-## What Happens in the Plot
+<div class="info-card">
+
+## Ecological Patterns in the Plot
 
 - **Seasonal Bursts in Beluga Detections (Light Blue Curve):**  
   The Beluga Whale acoustic curve climbs to 1,244 detections over roughly 331 days. Rather than rising at a constant rate, it shows steep steps during autumn and summer migration windows through the Beaufort Sea, separated by a flat horizontal gap during the mid-winter months when Belugas move away from heavy pack ice.
@@ -35,10 +131,14 @@ This project compares observation timelines and tracking patterns between two ma
   - *Multi-year tracks* like **Ali** (273 transmissions across 770 days) and **Blancpain** (73 transmissions across 526 days) show intermittent bursts when the sharks surface long enough to transmit to satellites.
   - *Opportunistic Coral Sea Sightings* extend across more than 10 years (4,006 days), forming a long, gradual line across the bottom of the chart.
 
----
+</div>
+
+<div class="info-card">
 
 ## Using the Interactive Controls
 
 - **Top Filter Sliders & Dropdown:** Filter the points in real time by elapsed days, cumulative spotting count, or select a single named Whale Shark or the Beluga Whale dataset.
 - **Timeframe View Menu (Top-Left of Plot):** Switch between the full 4,006-day span, a log-scale X-axis that spreads short and long tracks evenly, or zoomed-in views of the 0–400 day overlap window.
 - **Bottom Range Slider:** Drag the handles at the bottom of the plot to zoom dynamically into any window of elapsed days.
+
+</div>

@@ -1,18 +1,21 @@
 project:
   type: website
-  output-dir: _site
-  render:
-    - project.qmd
-    - about.qmd
+  output-dir: .
 
 website:
-  title: "Whale Shark vs. Beluga Whale"
+  title: "Marine Tracking Explorer"
   navbar:
+    background: "#0a2540"
+    foreground: "#ffffff"
     left:
       - href: project.qmd
-        text: Home
+        text: "Interactive Graphic"
+      - href: findings.qmd
+        text: "What the Data Tells Us"
+      - href: why-compare.qmd
+        text: "Why Compare?"
       - href: about.qmd
-        text: About
+        text: "About the Data"
 
 format:
   html:

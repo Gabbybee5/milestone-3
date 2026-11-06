@@ -1,0 +1,137 @@
+---
+title: ""
+format:
+  html:
+    page-layout: full
+    title-block-style: none
+---
+
+```{=html}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f3f7fa;
+  color: #1e293b;
+}
+
+#title-block-header {
+  display: none !important;
+}
+
+#quarto-content.page-columns,
+main.content.page-columns {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+  padding: 0 2rem 3rem 2rem !important;
+  margin: 0 auto !important;
+}
+
+.hero-banner {
+  background: linear-gradient(135deg, #07192f 0%, #0d3b66 55%, #0f766e 100%);
+  color: #ffffff;
+  padding: 2.5rem 2.5rem;
+  border-radius: 16px;
+  margin: 1.5rem 0 1.75rem 0;
+  box-shadow: 0 12px 30px rgba(7, 25, 47, 0.18);
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #7dd3fc;
+  background: rgba(125, 211, 252, 0.12);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.85rem;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.info-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-card h2 {
+  margin-top: 0;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 1.35rem;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 0.6rem;
+}
+</style>
+
+<div class="hero-banner">
+  <div class="hero-eyebrow">Ecological & Scientific Context</div>
+  <h1 class="hero-title">Why Compare Whale Sharks and Beluga Whales?</h1>
+  <p class="hero-subtitle">
+    Examining how two large marine vertebrates navigate extreme climate differences, seasonal migrations, and biological adaptations.
+  </p>
+</div>
+```
+
+<div class="info-card">
+
+## 1. Climate Differences: Tropical Coral Sea vs. Polar Arctic Waters
+
+Comparing **Whale Sharks (*Rhincodon typus*)** in Australia's Coral Sea with **Beluga Whales (*Delphinapterus leucas*)** in the Western Beaufort Sea highlights how ocean temperature and seasonal environmental barriers shape marine movement:
+
+- **Tropical & Subtropical Warm Waters (Whale Sharks):** Whale sharks inhabit warm waters across the Coral Sea where sea-surface temperatures remain relatively stable year-round. Because their habitat never freezes over, individuals can be tracked across every season, driven primarily by plankton blooms and coral/fish spawning aggregations rather than ice cover.
+- **Extreme Polar Sea-Ice Cycles (Beluga Whales):** Beluga whales live in freezing Arctic waters where expanding winter pack ice physically closes off parts of the Beaufort Sea for months at a time. On our graphic, this climate constraint appears directly in the data as sharp seasonal bursts of detections followed by a long winter gap when sea ice forces the whales elsewhere.
+
+</div>
+
+<div class="info-card">
+
+## 2. Migration Patterns & Movement Behavior
+
+Both organisms undertake large-scale movements, yet their migration strategies look completely different when plotted over elapsed days:
+
+- **Predictable Seasonal Corridors (Belugas):** Beluga whales migrate in tightly coordinated seasonal pulses along Arctic shelf breaks as sea ice retreats in late spring/summer and forms again in autumn. A single fixed mooring (`Aural_M2`) records hundreds of acoustic detections in concentrated windows as pods pass through the corridor.
+- **Wide-Ranging Oceanic Foraging (Whale Sharks):** Tagged whale sharks travel individually across deep coral sea basins and continental shelves. Some sharks (like *Megashark* and *Alexios*) remain in active surface-tracking range for hundreds of transmissions within a single year, while others (like *Ali* and *Blancpain*) dive deep or travel across remote ocean regions for months between satellite uplinks.
+
+</div>
+
+<div class="info-card">
+
+## 3. Different Species & Biological Adaptations
+
+Placing these two species side by side contrasts two fundamentally different evolutionary branches of marine megafauna:
+
+- **Ectothermic Filter-Feeding Fish (Whale Shark):** As the world's largest fish (a cartilaginous elasmobranch), the whale shark breathes through gills and relies on warm water temperatures to regulate its metabolism after deep, cold foraging dives. When it returns to warm surface waters to thermoregulate and feed on surface plankton, its satellite tag can transmit its location.
+- **Endothermic Air-Breathing Mammal (Beluga Whale):** As a toothed cetacean adapted to sub-zero Arctic waters, the beluga has thick blubber, lacks a dorsal fin (allowing it to swim safely beneath sea ice), and relies heavily on vocalizations and echolocation clicks to navigate dark, ice-covered waters — making passive underwater acoustic hydrophones the ideal way to detect them even when surface sightings are impossible.
+
+</div>
+
+<div class="info-card">
+
+## 4. Why This Comparison Matters for Conservation
+
+Studying tropical telemetry alongside Arctic acoustic monitoring shows how **climate warming affects both poles and tropics simultaneously**: shifting ocean currents and warming waters alter plankton hotspots for Coral Sea whale sharks, while shrinking Arctic sea ice transforms migration timing and underwater noise exposure for Beaufort Sea beluga whales.
+
+</div>

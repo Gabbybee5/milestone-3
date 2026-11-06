@@ -1,0 +1,258 @@
+---
+title: ""
+format:
+  html:
+    page-layout: full
+    title-block-style: none
+---
+
+```{=html}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f3f7fa;
+  color: #1e293b;
+}
+
+#title-block-header {
+  display: none !important;
+}
+
+#quarto-content.page-columns,
+main.content.page-columns {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+  padding: 0 2rem 3rem 2rem !important;
+  margin: 0 auto !important;
+}
+
+.hero-banner {
+  background: linear-gradient(135deg, #07192f 0%, #0d3b66 55%, #0f766e 100%);
+  color: #ffffff;
+  padding: 2.5rem 2.5rem;
+  border-radius: 16px;
+  margin: 1.5rem 0 1.75rem 0;
+  box-shadow: 0 12px 30px rgba(7, 25, 47, 0.18);
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #7dd3fc;
+  background: rgba(125, 211, 252, 0.12);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.85rem;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.info-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-card h2 {
+  margin-top: 0;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 1.35rem;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 0.6rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  font-size: 0.94rem;
+}
+
+.data-table th, .data-table td {
+  text-align: left;
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table th {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-weight: 700;
+}
+</style>
+
+<div class="hero-banner">
+  <div class="hero-eyebrow">Key Findings & Graph Breakdown</div>
+  <h1 class="hero-title">What the Data on the Graph Specifically Tells Us</h1>
+  <p class="hero-subtitle">
+    A detailed guide to the specific curves, plateaus, and seasonal jumps visible across the 3,635 observations on the interactive plot.
+  </p>
+</div>
+```
+
+<div class="info-card">
+
+## 1. What the Light Blue Curve Tells Us (Beluga Whales in the Beaufort Sea)
+
+The light blue curve tracks **1,244 acoustic detections** of Beluga Whales (*Delphinapterus leucas*) at the `Aural_M2` hydrophone mooring between **September 30, 2010 and August 27, 2011 (331 days)**. Looking closely at its shape on the graph reveals three distinct seasonal phases:
+
+- **Phase 1 — Autumn Migration Burst (Days 0 to 55 | Sept–Nov 2010):**  
+  The curve climbs rapidly from 1 to **316 detections** (6 in late September, 171 in October, and 139 in November). This steep initial slope captures Beluga pods vocalizing heavily as they migrate out of the Beaufort Sea ahead of advancing winter sea ice.
+- **Phase 2 — The 4-Month Winter Sea-Ice Gap (Days 55 to 195 | Dec 2010–March 2011):**  
+  Between late November 2010 and early April 2011, there are **zero detections** for roughly **140 consecutive days**. On the graph, this appears as an empty horizontal jump at a height of 316 detections — direct visual proof that heavy winter pack ice completely excluded Belugas from this part of the western Beaufort Sea.
+- **Phase 3 — Spring Lead Opening & Summer Peak (Days 195 to 331 | April–Aug 2011):**  
+  As cracks (leads) open in the ice during spring, detections resume abruptly in **April (132)** and **May (206)**, pause briefly in **June (26)**, and then surge nearly vertically in **July (304)** and **August (260)** up to the final count of **1,244 detections**.
+
+</div>
+
+<div class="info-card">
+
+## 2. What the Dark Teal Curves Tell Us (Coral Sea Whale Sharks)
+
+Unlike the single mooring curve for Belugas, the **2,391 dark teal points** split into **19 distinct trajectories** (18 individually named satellite-tagged whale sharks plus 1 long line of opportunistic sightings). Their shapes on the graph reveal three behavioral patterns:
+
+- **High-Frequency Austral Summer Tracks (Days 0 to 160):**  
+  Most sharks were tagged during late November and early December coral spawning aggregations in the Coral Sea. Their curves shoot steeply upward from Day 0 because the sharks spend substantial time feeding near the surface, allowing their tags to transmit multiple times per day:
+  - **Alexios:** Climbs to **357 locations in just 158 days** (~2.3 transmissions/day).
+  - **Sharpie:** Reaches **261 locations in 97 days** (~2.7 transmissions/day).
+  - **Juanita & GBR1:** Reach **204 locations (132 days)** and **177 locations (146 days)** respectively.
+- **Year-Long & Multi-Year "Step-and-Plateau" Tracks (Days 160 to 770):**  
+  Three sharks extend far to the right on the graph with alternating flat gaps and steep upward steps:
+  - **Megashark (423 detections over 397 days):** The tallest whale shark curve on the graph. After an initial burst, its curve flattens across mid-year (when the shark dives deeper or moves offshore with fewer satellite uplinks) and then climbs steeply again past Day 300.
+  - **Ali (273 detections over 770 days / 2.1 years)** and **Blancpain (73 detections over 526 days / 1.4 years):** Show that individual whale sharks survive with active tags across multiple years, re-emerging in surface waters in seasonal cycles.
+- **Decade-Long Baseline Presence (Days 0 to 4,006):**  
+  The longest, flattest dark teal line stretching all the way to **4,006 days (~11 years, 2007–2018)** represents **136 opportunistic Coral Sea sightings**, demonstrating consistent multi-year presence in the region even before high-density satellite tagging began.
+
+</div>
+
+<div class="info-card">
+
+## 3. Direct Comparison: What the Data Tells Us About the Whales vs. the Sharks
+
+When we look at the light blue Beluga Whale curve and the dark teal Whale Shark curves together on the same axes, the data reveals three direct comparisons:
+
+- **Detection Volume in the 0–331 Day Overlap Window (Pod Bottleneck vs. Solitary Individuals):**  
+  Over the first **331 days**, the Beluga Whale curve climbs to **1,244 cumulative detections** — nearly **3 times higher** on the Y-axis than the single most-detected Whale Shark (*Megashark*, with **423 detections** over 397 days). This shows that a single stationary hydrophone placed in an Arctic migration corridor detects passing groups of vocalizing whales at a much higher cumulative volume than a satellite tag tracking a solitary shark that only transmits when its fin breaks the ocean surface.
+- **Why the Curves Flatten (Arctic Sea-Ice Lockout vs. Deep-Water Foraging):**  
+  Both species exhibit flat horizontal plateaus on the graph where zero new detections are recorded for weeks or months, but the data points to opposite causes:
+  - The **Beluga Whale plateau (Days 55–195)** happens during the freezing Arctic winter (December–March) when solid pack ice forces the entire population out of the Western Beaufort Sea.
+  - The **Whale Shark plateaus** (seen mid-track in *Megashark*, *Ali*, and *Blancpain*) occur in warm tropical waters when individual sharks spend extended periods swimming at depth or far offshore without surfacing long enough to lock onto a satellite.
+- **Short-Term Seasonal Intensity vs. Multi-Year Persistence (X-Axis Span):**  
+  On the X-axis, the Beluga data is concentrated entirely within a single **1-year seasonal cycle (331 days)**, whereas the Whale Shark data stretches across **2+ years for tagged individuals (*Ali* at 770 days)** and **11 years for Coral Sea sightings (4,006 days)** — showing how acoustic moorings excel at capturing high-density seasonal migrations while satellite telemetry and visual surveys capture multi-year individual roaming.
+
+</div>
+
+<div class="info-card">
+
+## 4. FAQ: Why Can We Compare One Beluga Line (`Aural_M2`) Against 19 Whale Shark Tracks?
+
+A natural question when viewing the graph is: *Why is there only one light blue Beluga Whale line (`Aural_M2`) while there are 19 separate dark teal Whale Shark lines — and can we still compare them fairly?* **Yes, for three key reasons:**
+
+- **One Hydrophone Captures Entire Migrating Pods (Not Just One Animal):**  
+  Whale sharks are tracked using physical satellite tags attached to individual fins (so each shark gets its own named ID like *Megashark* or *Alexios*). In contrast, Beluga Whales in the icy Beaufort Sea are monitored using a stationary underwater acoustic recorder (`Aural_M2`). Rather than tracking just one whale, that single `Aural_M2` line represents **1,244 separate acoustic detection events** recorded as numerous Beluga pods swam and vocalized past the mooring over a full year.
+- **Over 1,200 Data Points Provide Strong Statistical Weight:**  
+  Even though the Beluga data is grouped under one mooring ID, its **1,244 observations** make up more than a third of the entire 3,635-point dataset — and contain nearly **three times as many data points** as the longest-tracked individual Whale Shark (*Megashark*, with 423 points).
+- **Normalized "Days Since First Detection" Puts Both Methods on Equal Footing:**  
+  By aligning every track to start at **Day 0 (Days Elapsed Since First Sighting)**, the graph measures *how quickly and in what seasonal rhythm detections accumulate over time*. That allows us to directly compare the seasonal pulse of an Arctic whale population against the individual movement rhythms of tropical whale sharks.
+
+</div>
+
+<div class="info-card">
+
+## 5. Summary Table of Key Trajectories on the Graph
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Organism / Track Name</th>
+      <th>Group</th>
+      <th>First Recorded</th>
+      <th>Last Recorded</th>
+      <th>Span (Days)</th>
+      <th>Total Detections</th>
+      <th>Pattern on Graph</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Beluga Whale (Aural_M2)</strong></td>
+      <td>Beaufort Sea (Light Blue)</td>
+      <td>2010-09-30</td>
+      <td>2011-08-27</td>
+      <td>331 days</td>
+      <td><strong>1,244</strong></td>
+      <td>Two steep seasonal surges separated by a 140-day winter ice gap</td>
+    </tr>
+    <tr>
+      <td><strong>Whale Shark (Megashark)</strong></td>
+      <td>Coral Sea (Dark Teal)</td>
+      <td>2023-11-30</td>
+      <td>2024-12-31</td>
+      <td>397 days</td>
+      <td><strong>423</strong></td>
+      <td>Highest individual shark curve; strong late-year resurgence</td>
+    </tr>
+    <tr>
+      <td><strong>Whale Shark (Alexios)</strong></td>
+      <td>Coral Sea (Dark Teal)</td>
+      <td>2021-12-05</td>
+      <td>2022-05-12</td>
+      <td>158 days</td>
+      <td><strong>357</strong></td>
+      <td>Rapid, steady climb across 5 months</td>
+    </tr>
+    <tr>
+      <td><strong>Whale Shark (Ali)</strong></td>
+      <td>Coral Sea (Dark Teal)</td>
+      <td>2021-12-06</td>
+      <td>2024-01-15</td>
+      <td>770 days</td>
+      <td><strong>273</strong></td>
+      <td>Longest tagged shark span (>2 years) with multi-season steps</td>
+    </tr>
+    <tr>
+      <td><strong>Whale Shark (Sharpie)</strong></td>
+      <td>Coral Sea (Dark Teal)</td>
+      <td>2023-12-01</td>
+      <td>2024-03-07</td>
+      <td>97 days</td>
+      <td><strong>261</strong></td>
+      <td>Very steep 3-month surface tracking burst</td>
+    </tr>
+    <tr>
+      <td><strong>Whale Shark (Coral Sea Sighting)</strong></td>
+      <td>Coral Sea (Dark Teal)</td>
+      <td>2007-11-05</td>
+      <td>2018-10-24</td>
+      <td>4,006 days</td>
+      <td><strong>136</strong></td>
+      <td>Long gradual line spanning nearly 11 years across the X-axis</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
