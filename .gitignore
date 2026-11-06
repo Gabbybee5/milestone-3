@@ -6,6 +6,10 @@ data/
 /.quarto/
 /_site/
 _site/
-project_files/
-
+/site_libs/
+site_libs/
+*_files/
+*_cache/
+search.json
+*.html
 **/*.quarto_ipynb
