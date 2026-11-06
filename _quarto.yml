@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - project.qmd
+    - about.qmd
+
+website:
+  title: "Whale Shark vs. Beluga Whale"
+  navbar:
+    left:
+      - href: project.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+
+format:
+  html:
+    theme: cosmo
+    page-layout: full
+    embed-resources: true

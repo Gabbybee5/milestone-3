@@ -4,4 +4,8 @@ data/
 
 # Quarto cache and build artifacts
 /.quarto/
+/_site/
+_site/
 project_files/
+
+**/*.quarto_ipynb
